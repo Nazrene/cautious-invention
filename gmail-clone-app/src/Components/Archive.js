@@ -9,10 +9,10 @@ export default function Archive({messages}) {
     as="li"
     className="d-flex justify-content-between align-items-start"
     >
-    <div className="ms-2 me-auto">
-      <div className="fw-bold">{message.subject}</div>
-      <p>{message.sender}</p>
-      <em>{message.datestamp}</em>
+    <div className="ms-2 me-auto d-flex col-11">
+      <div className="col-4 fs-5">{message.sender}</div>
+      <div className="fw-bold col-4">{message.subject}</div>
+      <div className="col-4 text-muted fs-6"><em>{message.datestamp}</em></div>
     </div>
     <Badge bg="primary" pill>
       14
@@ -20,7 +20,7 @@ export default function Archive({messages}) {
     </ListGroup.Item> 
   )
   return (
-    <ListGroup as="ol" numbered>
+    <ListGroup as="ul">
       {archives}
     </ListGroup>
   )

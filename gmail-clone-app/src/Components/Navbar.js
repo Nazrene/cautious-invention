@@ -16,7 +16,7 @@ export default function Navbars() {
   return (
     <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Gmail</Navbar.Brand>
+          <Navbar.Brand href="#home">GmailClone</Navbar.Brand>
           <Nav className="me-auto">
             <NavLink to='/' style={style}>Inbox</NavLink>
             <NavLink to='/outbox' style={style}>Outbox</NavLink>
