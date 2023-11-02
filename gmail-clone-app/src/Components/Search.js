@@ -7,7 +7,7 @@ export default function Search({filterText, setFilterText}) {
     setFilterText(input);
   }
   return (
-    <Form>
+    <Form className="bg-light border rounded-3 border border-5 p-2">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>group1@gmail.com</Form.Label>
         <Form.Control type="text" placeholder="Search" value={filterText} onChange={handleSearchInput} />

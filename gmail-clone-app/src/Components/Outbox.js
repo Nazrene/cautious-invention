@@ -22,6 +22,7 @@ export default function Outbox({messages, filter}) {
   })
   return (
     <ListGroup as="ul">
+      <h4 className='fs-3 text-primary'>Outbox</h4>
       {outbox}
     </ListGroup>
   )

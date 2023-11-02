@@ -30,6 +30,7 @@ export default function Inbox({messages, filter}) {
   })
   return (
     <ListGroup as="ul">
+      <h4 className='fs-3 text-primary'>Inbox</h4>
       {inbox}
     </ListGroup>
   )

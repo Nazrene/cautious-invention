@@ -22,6 +22,7 @@ export default function Archive({messages, filter}) {
   })
   return (
     <ListGroup as="ul">
+      <h4 className='fs-3 text-primary'>Archives</h4>
       {archives}
     </ListGroup>
   )

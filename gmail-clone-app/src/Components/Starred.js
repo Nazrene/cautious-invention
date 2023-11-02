@@ -22,6 +22,7 @@ export default function Starred({messages, filter}) {
   })
   return (
     <ListGroup as="ul">
+      <h4 className='fs-3 text-primary'>Starred</h4>
       {starred}
     </ListGroup>  
   )
