@@ -10,7 +10,7 @@ export default function Starred({messages, filter}) {
     }
     return<ListGroup.Item
       as="li"
-      className="d-flex justify-content-between align-items-start"
+      className="d-flex justify-content-between align-items-start list-group-item list-group-item-danger"
       key={message.id}
       >
       <div className="ms-2 me-auto d-flex col-11">
@@ -21,9 +21,11 @@ export default function Starred({messages, filter}) {
     </ListGroup.Item>   
   })
   return (
-    <ListGroup as="ul">
-      <h4 className='fs-3 text-primary'>Starred</h4>
-      {starred}
-    </ListGroup>  
+    <>
+      <h4 className='fs-3 text-danger'>Starred</h4>
+      <ListGroup as="ul">
+        {starred}
+      </ListGroup>
+    </>  
   )
 }

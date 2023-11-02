@@ -14,24 +14,32 @@ export default function Inbox({messages, filter}) {
     }
     return <ListGroup.Item
       as="li"
-      className="d-flex justify-content-between align-items-start"
+      className="d-flex justify-content-between align-items-start list-group-item list-group-item-light"
       key={message.id}
       >
-      <div className="ms-2 me-auto d-flex col-11">
+      <div className='d-block'>
+        <div><i class="bi bi-archive text-dark"></i></div> 
+        <div><i class="bi bi-trash-fill text-danger"></i></div>
+      </div>
+      <div className="ms-2 me-auto d-flex col-10">
         <div className="col-4 fs-5">{message.sender}</div>
         <div className="fw-bold col-4">{message.subject}</div>
         <div className="col-4 text-muted fs-6"><em>{message.datestamp}</em></div>
       </div>
-      
       <Badge bg="primary" pill>
         {message.read ? "": "Unread"}
       </Badge>
-    </ListGroup.Item> 
+      <div className='ms-2'><i class="bi bi-star text-warning"></i></div>
+    </ListGroup.Item>
+
   })
   return (
-    <ListGroup as="ul">
+    <>
       <h4 className='fs-3 text-primary'>Inbox</h4>
-      {inbox}
-    </ListGroup>
+      <ListGroup as="ul">
+        {inbox}
+      </ListGroup>
+    </>
+    
   )
 }

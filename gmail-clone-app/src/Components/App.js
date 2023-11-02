@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className='container-fluid bg-muted min-vh-100'>
       <div className='row'>
-        <div className='col-2 bg-white vh-100'>
+        <div className='col-2 bg-transparent vh-100'>
           <Navbars />
         </div>
         <div className='col'>

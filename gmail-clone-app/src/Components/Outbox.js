@@ -10,7 +10,7 @@ export default function Outbox({messages, filter}) {
     }
     return<ListGroup.Item
       as="li"
-      className="d-flex justify-content-between align-items-start"
+      className="d-flex justify-content-between align-items-start list-group-item list-group-item-success"
       key={message.id}
       >
       <div className="ms-2 me-auto d-flex col-11">
@@ -21,9 +21,11 @@ export default function Outbox({messages, filter}) {
     </ListGroup.Item> 
   })
   return (
-    <ListGroup as="ul">
-      <h4 className='fs-3 text-primary'>Outbox</h4>
-      {outbox}
-    </ListGroup>
+    <>
+      <h4 className='fs-3 text-success'>Outbox</h4>
+      <ListGroup as="ul">
+        {outbox}
+      </ListGroup>
+    </>
   )
 }

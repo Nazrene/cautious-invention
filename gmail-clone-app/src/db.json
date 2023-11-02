@@ -381,6 +381,28 @@
       "sent": true,
       "starred": false,
       "id": 32
+    },
+    {
+      "sender": "group1@gmail.com",
+      "recipient": "allan@gmail.com",
+      "subject": "Finished Presentation",
+      "body": "Hello, the presentation has ended",
+      "datestamp": "Thu Nov 02 2023",
+      "archived": false,
+      "sent": true,
+      "starred": false,
+      "id": 33
+    },
+    {
+      "sender": "group1@gmail.com",
+      "recipient": "allan@gmail.com",
+      "subject": "I'm happy ",
+      "body": "I am so happy to style this application",
+      "datestamp": "Thu Nov 02 2023",
+      "archived": false,
+      "sent": true,
+      "starred": false,
+      "id": 34
     }
   ]
 }

@@ -38,39 +38,50 @@ export default function Compose({handleNewMail}) {
     })
     .then(r => r.json())
     .then((email) => {
-      handleNewMail(email)
+      handleNewMail(email);
+      //reset the input field
+      setNewMail(
+        {
+          sender: "group1@gmail.com",
+          recipient: "",
+          subject: "",
+          body: "",
+          datestamp: "",
+          archived: false,
+          sent: true,
+          starred: false
+        }
+      )
     })
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <hr className='text-primary'></hr>
-      <Form.Label className='text-primary fs-3 fw-bold'>Compose mail</Form.Label>
+    <Form onSubmit={handleSubmit} className='bg-light p-2 rounded'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" value={newMail.sender} onChange={handleFormData} id='sender' required/>
-        <Form.Text className="text-muted">
+        <Form.Label className="text-primary fw-bold">Email address</Form.Label>
+        <Form.Control type="email" className='text-muted' value={newMail.sender} onChange={handleFormData} id='sender' required/>
+        <Form.Text className="text-warning">
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label> Recipient's Email address</Form.Label>
+        <Form.Label className="text-primary fw-bold"> Recipient's Email address</Form.Label>
         <Form.Control type="email" placeholder="enter email" value={newMail.recipient} onChange={handleFormData} id='recipient' required/>
-        <Form.Text className="text-muted">
+        <Form.Text className="text-warning">
           Recipient's email
         </Form.Text>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>RE:</Form.Label>
+        <Form.Label className="text-primary fw-bold">RE:</Form.Label>
         <Form.Control type="text" placeholder="enter subject" value={newMail.subject} onChange={handleFormData} id='subject' required/>
-        <Form.Text className="text-muted">
+        <Form.Text className="text-warning">
           Your subject goes here..
         </Form.Text>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Body</Form.Label>
-        <Form.Control type="text" as="textarea" placeholder="type message here" value={newMail.body} onChange={handleFormData} id='body' required/>
-        <Form.Text className="text-muted">
+        <Form.Label className="text-primary fw-bold">Body</Form.Label>
+        <Form.Control style={{height: "200px"}} type="text" as="textarea" placeholder="type message here" value={newMail.body} onChange={handleFormData} id='body' required/>
+        <Form.Text className="text-warning">
           Your mail goes here..
         </Form.Text>
       </Form.Group>

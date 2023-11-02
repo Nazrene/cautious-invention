@@ -10,7 +10,7 @@ export default function Archive({messages, filter}) {
     }
     return<ListGroup.Item
       as="li"
-      className="d-flex justify-content-between align-items-start"
+      className="d-flex justify-content-between align-items-start list-group-item list-group-item-warning"
       key={message.id}
       >
       <div className="ms-2 me-auto d-flex col-11">
@@ -18,12 +18,15 @@ export default function Archive({messages, filter}) {
         <div className="fw-bold col-4">{message.subject}</div>
         <div className="col-4 text-muted fs-6"><em>{message.datestamp}</em></div>
       </div>
+      <i class="bi bi-trash-fill"></i>
     </ListGroup.Item> 
   })
   return (
-    <ListGroup as="ul">
-      <h4 className='fs-3 text-primary'>Archives</h4>
-      {archives}
-    </ListGroup>
+    <>
+      <h4 className='fs-3 text-warning'>Archives</h4>
+      <ListGroup as="ul">
+        {archives}
+      </ListGroup>
+    </>
   )
 }
